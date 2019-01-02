@@ -1,6 +1,6 @@
 # bloc_flutter
 
-A new flutter plugin project.
+Bloc pattern with Behavior Subject to be used with Flutter. 
 
 ## Getting Started
 
