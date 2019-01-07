@@ -13,11 +13,11 @@ typedef BlocCreator<T extends Bloc> = T Function();
 class BlocProvider<T extends Bloc> extends StatefulWidget {
   const BlocProvider({
     Key key,
-    @required this.creator,
+    @required this.blocCreator,
     @required this.child,
   }) : super(key: key);
 
-  final BlocCreator creator;
+  final BlocCreator blocCreator;
   final Widget child;
 
   @override
@@ -38,7 +38,7 @@ class _BlocProviderState<T extends Bloc> extends State<BlocProvider<T>> {
   @override
   void initState() {
     super.initState();
-    _bloc = widget.creator();
+    _bloc = widget.blocCreator();
     _bloc.init();
   }
 
