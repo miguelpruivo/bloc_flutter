@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class Bloc {
-  void init();
   void dispose();
 }
 
@@ -39,7 +38,6 @@ class _BlocProviderState<T extends Bloc> extends State<BlocProvider<T>> {
   void initState() {
     super.initState();
     _bloc = widget.blocCreator();
-    _bloc.init();
   }
 
   @override
